@@ -9,26 +9,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twoja Strona</title>
     <style>
-      .legit {
-        font-family: "Substance W00 Bold";
-        font-size: 20px;
-      }
       .header {
+        display: flex; /* Ustawienie kontenera na flex */
+        align-items: center; /* Wycentrowanie dzieci w pionie */
+        justify-content: flex-start; /* Wyrównanie dzieci do początku kontenera */
         background-color: #800000; /* Kolor bordowy */
-        text-align: center; /* Wyśrodkowanie tekstu */
-        padding: 10px; /* Dopełnienie dladsddsdsnagłówka */
+        padding: 10px; /* Dopełnienie dla nagłówka */
         width: 400px;
         height: 40px;
         color: #ffffff;
+      }
+      .legit {
+        font-family: "Substance W00 Bold";
+        font-size: 20px;
+        margin: 0; /* Usunięcie domyślnych marginesów */
+        margin-left: 70px; /* Dodanie marginesu z lewej strony tekstu */
+      }
+      .s {
+        /* Brak dodatkowych stylów jest potrzebny */
       }
     </style>
   </head>
   <body>
     <div class="header">
-      <!-- Twoje zdjęcie zostanie wstaeeeeeewione tutaj jako 'src' -->
+      <img
+        class="s"
+        src="./arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
+        alt=""
+      />
       <h1 class="legit">Legitymacja Szkolna</h1>
     </div>
-
-    <!-- Reszta twojej strondwddwddwdwwddwdwdy poniżej -->
+    <!-- Reszta twojej strony poniżej -->
   </body>
 </html>
