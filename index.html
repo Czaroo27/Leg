@@ -2,6 +2,12 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://db.onlinewebfonts.com/c/74a63d4eec6b8edbaf0ab36e3e66ce37?family=Substance+W00+Bold"
       rel="stylesheet"
@@ -48,9 +54,12 @@
         align-items: center;
       }
       .sa {
-        font-family: sans-serif;
+        font-family: Rajdhani;
         font-size: 15px;
         color: gray;
+      }
+      #ww {
+        margin-left: 60px;
       }
     </style>
   </head>
@@ -66,10 +75,11 @@
     </div>
     <img class="add" src="./Bez nazwy-1.png" alt="" />
     <div class="ee">
-      <h1 class="nrr">Nr Legitymacji</h1>
-      <h2 class="sa">‎ ‎22/27/2022</h2>
+      <h1 class="sa">Nr Legitymacji:</h1>
+      <h2 class="nrr">22/27/2022</h2>
+      <h3 id="ww" class="sa">Wydana:</h3>
     </div>
-    eeee
+
     <script>
       if (window.DeviceOrientationEvent) {
         window.addEventListener("deviceorientation", function (event) {
