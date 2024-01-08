@@ -35,7 +35,7 @@
       .add {
         width: 50px;
         margin: 10px;
-        transition: transform 0.2s; /* Dodanie płynnej animacji transformacji */
+        transition: filter 0.2s; /* Płynna animacja filtrów */
       }
     </style>
   </head>
@@ -54,12 +54,20 @@
     <script>
       if (window.DeviceOrientationEvent) {
         window.addEventListener("deviceorientation", function (event) {
-          var alpha = event.alpha; // Ruch wokół osi Z
           var beta = event.beta; // Ruch wokół osi X
           var gamma = event.gamma; // Ruch wokół osi Y
 
-          var transform = "rotateX(" + beta + "deg) rotateY(" + gamma + "deg)";
-          document.querySelector(".add").style.transform = transform;
+          // Przykładowe filtry CSS, które można dostosować
+          var hueRotation = gamma;
+          var brightness = 100 + beta;
+
+          var filter =
+            "hue-rotate(" +
+            hueRotation +
+            "deg) brightness(" +
+            brightness +
+            "%)";
+          document.querySelector(".add").style.filter = filter;
         });
       }
     </script>
