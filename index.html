@@ -35,6 +35,7 @@
       .add {
         width: 50px;
         margin: 10px;
+        transition: transform 0.2s; /* Dodanie płynnej animacji transformacji */
       }
     </style>
   </head>
@@ -49,6 +50,18 @@
       <img class="e" src="./more_vert_FILL0_wght400_GRAD0_opsz24.png" alt="" />
     </div>
     <img class="add" src="./Bez nazwy-1.png" alt="" />
-    <!-- Reszta twojej strony poniżej -->
+
+    <script>
+      if (window.DeviceOrientationEvent) {
+        window.addEventListener("deviceorientation", function (event) {
+          var alpha = event.alpha; // Ruch wokół osi Z
+          var beta = event.beta; // Ruch wokół osi X
+          var gamma = event.gamma; // Ruch wokół osi Y
+
+          var transform = "rotateX(" + beta + "deg) rotateY(" + gamma + "deg)";
+          document.querySelector(".add").style.transform = transform;
+        });
+      }
+    </script>
   </body>
 </html>
