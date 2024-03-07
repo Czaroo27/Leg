@@ -96,9 +96,29 @@
 }
 .flaga{
   width: 80px;
-  margin-left: 100px ;
+  margin-left: 120px ;
+
+  
 
 }
+@keyframes waveAnimation {
+  0%, 100% {
+    transform: translateX(0) rotate(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  75% {
+    transform: translateX(5px) rotate(5deg);
+  }
+}
+
+.flaga {
+  width: 80px;
+  margin-left: 120px;
+  animation: waveAnimation 2s linear infinite; /* Dodanie animacji do klasy flaga */
+}
+
 
     </style>
   </head>
